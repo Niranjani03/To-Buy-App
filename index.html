@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>💰 To-Buy App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+
+</head>
+<body>
+  <!-- 🔐 LOGIN / SIGNUP SECTION -->
+  <div class="auth-section" id="authSection">
+    <h2>🔐 Welcome to To-Buy App</h2>
+    <input type="text" id="authUsername" placeholder="Enter username" />
+    <input type="password" id="authPassword" placeholder="Enter password" />
+    <button id="loginBtn">Login</button>
+    <button id="signupBtn">Signup</button>
+    <p id="authMessage"></p>
+  </div>
+
+  <!-- 🏠 MAIN APP SECTION -->
+  <div class="app-section hidden" id="appSection">
+    <div class="header">
+      <h2>Hello, <span id="userDisplay">User</span></h2>
+      <p id="currentDate">Loading date...</p>
+      <button id="logoutBtn">Logout</button>
+    </div>
+
+    <!-- 💸 BUDGET TRACKER -->
+    <div class="budget-tracker">
+      <h3>🎯 Budget Tracker</h3>
+      <input type="number" id="totalBudget" placeholder="Set your total budget" />
+      <p>Total Budget: ₹<span id="budgetAmount">0</span></p>
+      <p>Remaining: ₹<span id="remainingAmount">0</span></p>
+    </div>
+
+    <!-- 🛍️ ADD ITEM SECTION -->
+    <div class="add-item">
+      <h3>🛍️ Add Item to Buy</h3>
+      <input type="text" id="itemName" placeholder="Item name" />
+      <input type="number" id="itemPrice" placeholder="Price (₹)" />
+      <select id="itemCategory">
+        <option value="Personal">Personal</option>
+        <option value="Tech">Tech</option>
+        <option value="Essentials">Essentials</option>
+        <option value="Fashion">Fashion</option>
+      </select>
+      <input type="text" id="itemNotes" placeholder="Notes (optional)" />
+      <button id="addItemBtn">Add</button>
+      <button id="toggleTheme">🌙 Dark Mode</button>
+    </div>
+
+    <!-- 📂 CATEGORY FILTER -->
+    <div class="filter-section">
+      <label for="categoryFilter">Filter by Category:</label>
+      <select id="categoryFilter">
+        <option value="All">All</option>
+        <option value="Personal">Personal</option>
+        <option value="Tech">Tech</option>
+        <option value="Essentials">Essentials</option>
+        <option value="Fashion">Fashion</option>
+      </select>
+    </div>
+
+    <!-- 🧾 TO-BUY LIST -->
+    <ul id="toBuyList" class="to-buy-list"></ul>
+
+    <!-- 📤 EXPORT -->
+    <div class="share-section">
+      <button id="exportBtn">📤 Export List</button>
+    </div>
+  </div>
+
+  <!-- 🔊 Sound -->
+  <audio id="dingSound" src="magic-ding.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

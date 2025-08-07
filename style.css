@@ -1,0 +1,223 @@
+/* 🌈 General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* 🌊 Base Styling */
+body {
+  background: #e0f7fa;
+  color: #004d40;
+  min-height: 100vh;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* 🎨 Auth Section */
+.auth-section {
+  background: #ffffffcc;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.auth-section input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 90%;
+  border: 1px solid #b2ebf2;
+  border-radius: 8px;
+}
+
+.auth-section button {
+  background: #26c6da;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.auth-section button:hover {
+  background: #00acc1;
+}
+
+#authMessage {
+  margin-top: 10px;
+  color: red;
+}
+
+/* 🚪 Logout */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#logoutBtn {
+  background: #ef5350;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#logoutBtn:hover {
+  background: #d32f2f;
+}
+
+/* 💸 Budget Section */
+.budget-tracker {
+  background: #ffffffcc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 500px;
+}
+
+.budget-tracker input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #b2ebf2;
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* 🛒 Add Item */
+.add-item {
+  background: #ffffffcc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.add-item input,
+.add-item select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #b2ebf2;
+  border-radius: 8px;
+}
+
+.add-item button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #26c6da;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-item button:hover {
+  background: #00acc1;
+}
+
+/* 🔍 Filter */
+.filter-section {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filter-section select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #80deea;
+}
+
+/* 🧾 To-Buy List */
+.to-buy-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
+}
+
+.to-buy-list li {
+  background: #ffffffdd;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid #26c6da;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+.to-buy-list li:hover {
+  transform: scale(1.01);
+}
+
+/* 📤 Export */
+.share-section {
+  margin-top: 20px;
+}
+
+#exportBtn {
+  padding: 10px 20px;
+  background: #26c6da;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#exportBtn:hover {
+  background: #00acc1;
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+  background: #263238;
+  color: #e0f7fa;
+}
+
+body.dark .auth-section,
+body.dark .budget-tracker,
+body.dark .add-item,
+body.dark .to-buy-list li {
+  background: #37474f;
+  color: #ffffff;
+}
+
+body.dark input,
+body.dark select {
+  background: #455a64;
+  color: white;
+  border: 1px solid #80deea;
+}
+
+body.dark button {
+  background: #4dd0e1;
+}
+
+body.dark button:hover {
+  background: #00acc1;
+}
+
+/* 🔒 Hide Sections */
+.hidden {
+  display: none;
+}
